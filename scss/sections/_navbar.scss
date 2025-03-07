@@ -39,6 +39,10 @@
       &:hover {
         color: rgba($white, 0.95);
       }
+
+      @include media-breakpoint-down(md) {
+        font-size: 0.7rem;
+      }
     }
   }
 
