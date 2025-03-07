@@ -1,0 +1,42 @@
+@use "../custom" as *;
+
+.top-bar {
+  position: relative;
+  background-color: $primary;
+  height: 70px;
+
+  .row > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__notify {
+    background-color: $secondary;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 70px;
+  }
+
+  .content {
+    background-color: $dark-blue;
+    height: 70px;
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      padding-left: 2rem;
+    }
+    .fa-circle-xmark {
+      padding-right: 2.9rem;
+      font-size: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        color: rgba($white, 0.8);
+      }
+    }
+  }
+}

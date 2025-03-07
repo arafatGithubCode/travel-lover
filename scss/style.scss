@@ -1,0 +1,11 @@
+@use "./custom" as *;
+
+//  IMPORT COMPONENTS
+@use "./components/animations";
+@use "./components/buttons";
+@use "./components/mixins";
+@use "./components/typography";
+
+// IMPORT THE SECTIONS
+@use "./sections/topBar";
+@use "./sections/navbar";

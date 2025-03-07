@@ -1,0 +1,50 @@
+@use "../custom" as *;
+
+// flexCenter mixin
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// btn mixin
+@mixin btn($bg, $color) {
+  @include flexCenter;
+  min-width: max-content;
+  background-color: $bg;
+  color: $color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba($bg, 0.9);
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    outline: none;
+    display: block;
+    width: 100%;
+    word-spacing: nowrap;
+  }
+}
+
+// absoluteCenter mixin
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

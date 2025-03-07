@@ -1,0 +1,9 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.primary-btn {
+  @include btn($primary, $white);
+}
+.white-btn {
+  @include btn($white, $black);
+}

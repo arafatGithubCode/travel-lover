@@ -1,0 +1,109 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.nav-bar {
+  position: relative;
+
+  a {
+    color: $black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgba($black, 0.8);
+    }
+  }
+
+  .yt-logo {
+    background-color: rgba($black, 0.2);
+    position: relative;
+
+    img {
+      width: 150px;
+      @include absoluteCenter;
+    }
+  }
+
+  .left {
+    a {
+      color: $white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgba($white, 0.95);
+      }
+    }
+  }
+
+  .right {
+    padding-right: 2rem;
+
+    select {
+      background-color: $primary;
+      padding: 0 0.5rem;
+      border: none;
+      outline: none;
+      color: $white;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    i {
+      color: $white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgba($white, 0.95);
+      }
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+  .navbar {
+    padding-right: 1.5rem;
+  }
+  .menu-fade-down-bg {
+    animation: fadeDownBg 0.3s ease forwards;
+  }
+  .menu-icon {
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    i {
+      font-size: 2rem;
+      color: rgba($black, 0.7);
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    border: none;
+    transform: translateY(4px);
+  }
+}
