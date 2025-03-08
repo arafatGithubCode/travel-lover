@@ -12209,5 +12209,19 @@ textarea.form-control-lg {
 .tour-customization .notify .setting:hover {
   background-color: rgba(11, 107, 196, 0.8);
 }
+.tour-customization .tour-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.tour-customization .tour-card:hover .overlay {
+  background-color: #000;
+  opacity: 0.4;
+}
 
 /*# sourceMappingURL=style.css.map */
