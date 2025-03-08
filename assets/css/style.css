@@ -12181,4 +12181,33 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
+.tour-customization {
+  position: relative;
+  background-color: #fff;
+}
+.tour-customization .notify {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tour-customization .notify .setting {
+  background-color: #0b6bc4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tour-customization .notify .setting:hover {
+  background-color: rgba(11, 107, 196, 0.8);
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.tour-customization {
+  position: relative;
+  background-color: $white;
+
+  .notify {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .setting {
+      background-color: $primary;
+      @include flexCenter;
+      border-radius: 5px;
+      padding: 0.5rem;
+      color: $white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba($primary, 0.8);
+      }
+    }
+  }
+}
