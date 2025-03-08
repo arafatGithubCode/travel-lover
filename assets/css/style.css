@@ -11867,14 +11867,6 @@ textarea.form-control-lg {
     opacity: 1;
   }
 }
-@keyframes textWave {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 200% 0%;
-  }
-}
 .primary-btn {
   display: flex;
   justify-content: center;
@@ -12143,6 +12135,50 @@ textarea.form-control-lg {
 }
 .hero .content > div i:hover {
   color: rgba(0, 0, 0, 0.9);
+}
+.hero .thumb {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background-color: #0b6bc4;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+.hero .thumb span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.hero .video-box {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: inline-block;
+}
+.hero .video-box .play-btn {
+  position: relative;
+}
+.hero .video-box .play-btn i {
+  font-size: 3rem;
+  color: #fff;
+  padding: 0.5rem;
+}
+.hero .video-box .play-btn .border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  border: 0.55rem solid #fff;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+}
+.hero .video-box .play-btn .border-animation--border-1 {
+  animation-delay: 1s;
+}
+.hero .video-box .play-btn .border-animation--border-2 {
+  animation-delay: 1.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

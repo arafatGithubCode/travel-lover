@@ -70,4 +70,52 @@
       }
     }
   }
+
+  .thumb {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: $primary;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+
+    span {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .video-box {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: inline-block;
+    .play-btn {
+      position: relative;
+      i {
+        font-size: 3rem;
+        color: $white;
+        padding: 0.5rem;
+      }
+      .border-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
+        border: 0.55rem solid $white;
+        border-radius: 50%;
+        animation: pulse-border 1.5s linear infinite;
+
+        &--border-1 {
+          animation-delay: 1s;
+        }
+        &--border-2 {
+          animation-delay: 1.5s;
+        }
+      }
+    }
+  }
 }

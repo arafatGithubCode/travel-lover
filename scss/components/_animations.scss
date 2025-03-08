@@ -22,13 +22,3 @@
     opacity: 1;
   }
 }
-
-// Keyframes for text the wave animation
-@keyframes textWave {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 200% 0%;
-  }
-}
