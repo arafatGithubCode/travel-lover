@@ -1,0 +1,109 @@
+@use "../custom" as *;
+
+.tour-items {
+  position: relative;
+
+  .bg-text {
+    position: absolute;
+    font-size: 5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    -webkit-text-stroke: 1.5px $gray-500;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.3;
+    z-index: 0;
+    top: -10px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .top {
+    margin-top: -2.4rem;
+  }
+
+  .tour-item-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .tour-item {
+      width: 425px;
+
+      &__img-wrapper {
+        position: relative;
+        background: no-repeat center center / cover;
+        height: 300px;
+
+        .bookmark {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: $white;
+          z-index: 1;
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+
+        .overlay {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .btn1 {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+
+        .btn2 {
+          position: absolute;
+          top: 50px;
+          left: 10px;
+        }
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+
+      .skewed_button {
+        width: 150px;
+        height: 52px;
+        background: transparent;
+        text-decoration: none;
+        padding-left: 40px;
+        padding-right: 20px;
+        overflow-y: hidden;
+        color: $white;
+        font-size: 12px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 150px;
+          height: 60px;
+          background-color: $primary;
+          clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+          transition: background 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+}

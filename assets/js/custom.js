@@ -23,6 +23,12 @@ const initNavbarScrollEffect = () => {
   window.addEventListener("scroll", () => {
     const isScrolled = window.scrollY >= heroHeight;
 
+    if (isScrolled) {
+      menu.classList.add("shadow");
+    } else {
+      menu.classList.remove("shadow");
+    }
+
     menu.classList.toggle("fixed-top", isScrolled);
     menu.classList.toggle("menu-fade-down-bg", isScrolled);
   });
@@ -43,3 +49,10 @@ const initNavbarScrollEffect = () => {
 };
 
 initNavbarScrollEffect();
+
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);

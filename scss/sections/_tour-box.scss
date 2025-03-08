@@ -1,0 +1,33 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.tour-boxes {
+  position: relative;
+  background-color: #e7f0f9;
+
+  .tour-box {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translateY(-50%);
+      color: rgba($white, 0.7);
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      i {
+        opacity: 1;
+        color: $white;
+      }
+      h4 {
+        color: $secondary !important;
+      }
+    }
+  }
+}

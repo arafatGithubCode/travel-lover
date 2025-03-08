@@ -12037,7 +12037,7 @@ textarea.form-control-lg {
 .nav-bar .right svg {
   cursor: pointer;
 }
-.nav-bar .navbar {
+.nav-bar .menu {
   padding-right: 1.5rem;
 }
 .nav-bar .menu-fade-down-bg {
@@ -12209,19 +12209,168 @@ textarea.form-control-lg {
 .tour-customization .notify .setting:hover {
   background-color: rgba(11, 107, 196, 0.8);
 }
-.tour-customization .tour-card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.tour-customization .tour-card {
+  position: relative;
+  background: no-repeat center center/cover;
+}
+.tour-customization .tour-card .content {
   width: 100%;
   height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.tour-customization .tour-card .content:hover {
   background-color: #000;
+  opacity: 0.75;
+}
+.tour-customization .prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: rgba(255, 121, 2, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tour-customization .prev:hover {
+  background-color: #ff7902;
+}
+.tour-customization .next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(255, 121, 2, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tour-customization .next:hover {
+  background-color: #ff7902;
+}
+
+.tour-boxes {
+  position: relative;
+  background-color: #e7f0f9;
+}
+.tour-boxes .tour-box {
+  position: relative;
+}
+.tour-boxes .tour-box i {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.tour-boxes .tour-box:hover i {
+  opacity: 1;
+  color: #fff;
+}
+.tour-boxes .tour-box:hover h4 {
+  color: #ff7902 !important;
+}
+
+.tour-items {
+  position: relative;
+}
+.tour-items .bg-text {
+  position: absolute;
+  font-size: 5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  -webkit-text-stroke: 1.5px #adb5bd;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+  z-index: 0;
+  top: -10px;
+}
+@media (max-width: 767.98px) {
+  .tour-items .bg-text {
+    font-size: 3.5rem;
+  }
+}
+.tour-items .top {
+  margin-top: -2.4rem;
+}
+.tour-items .tour-item-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tour-items .tour-item-wrapper .tour-item {
+  width: 425px;
+}
+.tour-items .tour-item-wrapper .tour-item__img-wrapper {
+  position: relative;
+  background: no-repeat center center/cover;
+  height: 300px;
+}
+.tour-items .tour-item-wrapper .tour-item__img-wrapper .bookmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  z-index: 1;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.tour-items .tour-item-wrapper .tour-item__img-wrapper .overlay {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.tour-customization .tour-card:hover .overlay {
-  background-color: #000;
-  opacity: 0.4;
+.tour-items .tour-item-wrapper .tour-item__img-wrapper .btn1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.tour-items .tour-item-wrapper .tour-item__img-wrapper .btn2 {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+.tour-items .tour-item-wrapper .tour-item:hover .overlay {
+  opacity: 1;
+}
+.tour-items .tour-item-wrapper .tour-item .skewed_button {
+  width: 150px;
+  height: 52px;
+  background: transparent;
+  text-decoration: none;
+  padding-left: 40px;
+  padding-right: 20px;
+  overflow-y: hidden;
+  color: #fff;
+  font-size: 12px;
+}
+.tour-items .tour-item-wrapper .tour-item .skewed_button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  height: 60px;
+  background-color: #0b6bc4;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: background 0.3s ease-in-out;
+}
+.tour-items .tour-item-wrapper .tour-item .skewed_button:hover::before {
+  background-color: #ff7902;
 }
 
 /*# sourceMappingURL=style.css.map */
