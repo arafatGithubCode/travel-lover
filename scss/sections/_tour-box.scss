@@ -8,6 +8,22 @@
   .tour-box {
     position: relative;
 
+    h4 {
+      font-size: 1rem;
+
+      @include media-breakpoint-down(md) {
+        font-size: 0.8rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+
+      @include media-breakpoint-down(md) {
+        font-size: 0.8rem;
+      }
+    }
+
     i {
       position: absolute;
       top: 50%;

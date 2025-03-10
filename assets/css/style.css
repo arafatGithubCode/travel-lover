@@ -12303,6 +12303,22 @@ textarea.form-control-lg {
 .tour-boxes .tour-box {
   position: relative;
 }
+.tour-boxes .tour-box h4 {
+  font-size: 1rem;
+}
+@media (max-width: 767.98px) {
+  .tour-boxes .tour-box h4 {
+    font-size: 0.8rem;
+  }
+}
+.tour-boxes .tour-box p {
+  font-size: 1rem;
+}
+@media (max-width: 767.98px) {
+  .tour-boxes .tour-box p {
+    font-size: 0.8rem;
+  }
+}
 .tour-boxes .tour-box i {
   position: absolute;
   top: 50%;
