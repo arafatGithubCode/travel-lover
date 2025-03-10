@@ -11949,7 +11949,7 @@ textarea.form-control-lg {
 }
 @media (max-width: 767.98px) {
   .top-heading .bg-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -12165,10 +12165,21 @@ textarea.form-control-lg {
   border-radius: 5px;
   display: inline-block;
 }
+@media (max-width: 575.98px) {
+  .hero .thumb {
+    left: 5px;
+    bottom: 5px;
+  }
+}
 .hero .thumb span {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+}
+@media (max-width: 575.98px) {
+  .hero .thumb span {
+    font-size: 0.7rem;
+  }
 }
 .hero .video-box {
   position: absolute;
@@ -12317,11 +12328,16 @@ textarea.form-control-lg {
 .tour-items .tour-item-wrapper {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .tour-items .tour-item-wrapper .tour-item {
   width: 425px;
+}
+@media (max-width: 575.98px) {
+  .tour-items .tour-item-wrapper .tour-item {
+    width: 390px;
+  }
 }
 .tour-items .tour-item-wrapper .tour-item__img-wrapper {
   position: relative;
@@ -12559,6 +12575,106 @@ textarea.form-control-lg {
 @media (min-width: 992px) {
   .recommended-travellers .carousel-item {
     flex: 0 0 16.66%;
+  }
+}
+
+footer {
+  position: relative;
+  background-color: #160220;
+}
+footer .bb {
+  border-bottom: 2px solid #350050;
+}
+footer .bb .left-content {
+  border-right: 2px solid #350050;
+}
+footer .bb .left-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: start;
+  line-height: 1.4em;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 575.98px) {
+  footer .bb .left-content p {
+    text-align: justify;
+  }
+}
+footer .bb .left-content i {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
+  color: #000;
+  background-color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+footer .bb .left-content i:hover {
+  color: #ff7902;
+}
+footer .bb .right-content h2 {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+footer .bb .right-content a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #593e66;
+  text-transform: capitalize;
+  transition: color 0.3s ease-in-out;
+}
+footer .bb .right-content a:hover {
+  color: #fff;
+}
+footer .bb .right-content p {
+  font-size: 11px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+footer .bb .right-content form > div {
+  padding-left: 5px;
+}
+footer .bb .right-content form > div input {
+  flex-basis: 80%;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+}
+footer .bb .right-content form > div button {
+  flex-basis: 20%;
+  flex-grow: 1;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+footer .bb .right-content form p {
+  padding-top: 2px;
+  font-size: 10.5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateX(-20px);
+}
+footer .bb .right-content form p span {
+  color: #ff7902;
+}
+footer .copyright .protect {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.9);
+}
+footer .copyright .source-logo span {
+  color: #ff7902;
+  font-size: 10px;
+}
+@media (max-width: 575.98px) {
+  footer .mail {
+    font-size: 8px;
   }
 }
 

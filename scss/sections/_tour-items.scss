@@ -6,11 +6,15 @@
   .tour-item-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     flex-wrap: wrap;
 
     .tour-item {
       width: 425px;
+
+      @include media-breakpoint-down(sm) {
+        width: 390px;
+      }
 
       &__img-wrapper {
         position: relative;

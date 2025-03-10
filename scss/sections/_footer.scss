@@ -1,0 +1,116 @@
+@use "../custom" as *;
+
+footer {
+  position: relative;
+  background-color: $footer;
+
+  .bb {
+    border-bottom: 2px solid #350050;
+    .left-content {
+      border-right: 2px solid #350050;
+      p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-align: start;
+        line-height: 1.4em;
+        color: rgba($white, 0.8);
+
+        @include media-breakpoint-down(sm) {
+          text-align: justify;
+        }
+      }
+
+      i {
+        font-size: 1rem;
+        padding: 0.5rem;
+        border: 1.5px solid transparent;
+        border-radius: 50%;
+        color: $black;
+        background-color: $white;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .right-content {
+      h2 {
+        color: $white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #593e66;
+        text-transform: capitalize;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $white;
+        }
+      }
+      p {
+        font-size: 11px;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+      }
+      form {
+        > div {
+          padding-left: 5px;
+          input {
+            flex-basis: 80%;
+            border: none;
+            outline: none;
+            padding: 5px 0;
+          }
+          button {
+            flex-basis: 20%;
+            flex-grow: 1;
+            border-top-right-radius: 5px !important;
+            border-bottom-right-radius: 5px !important;
+          }
+        }
+        p {
+          padding-top: 2px;
+          font-size: 10.5px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          color: rgba($white, 0.8);
+          transform: translateX(-20px);
+
+          span {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    .protect {
+      font-size: 11px;
+      color: rgba($white, 0.9);
+    }
+    .source-logo {
+      span {
+        color: $secondary;
+        font-size: 10px;
+      }
+    }
+  }
+  .mail {
+    @include media-breakpoint-down(sm) {
+      font-size: 8px;
+    }
+  }
+}
