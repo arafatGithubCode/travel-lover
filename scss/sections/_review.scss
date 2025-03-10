@@ -1,0 +1,131 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.review {
+  position: relative;
+  background: url("https://images.pexels.com/photos/17845104/pexels-photo-17845104/free-photo-of-kanchanjunga-mountain-sunrise.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center / cover;
+
+  &__txt {
+    font-size: 5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: $white;
+    -webkit-text-stroke: 1.5px $white;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .carousel-item {
+    border-right: 5px solid transparent;
+
+    .carousel-img {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: no-repeat center center / cover;
+
+      .fa-circle-play {
+        @include absoluteCenter;
+        color: rgba($white, 0.8);
+        font-size: 3rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      .star {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+      }
+      p {
+        position: absolute;
+        left: 20px;
+        bottom: 2px;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    svg {
+      border: 2.5px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: rgba($black, 0.1);
+    }
+  }
+
+  .prev {
+    position: absolute;
+    bottom: 0px;
+    left: 46%;
+    transform: translateX(-46%);
+  }
+  .next {
+    position: absolute;
+    bottom: 0px;
+    right: 46%;
+    transform: translateX(46%);
+  }
+  .logo {
+    width: 133px;
+    height: 50px;
+    background-color: $white;
+    padding: 5px;
+    position: relative;
+    border-radius: 5px;
+
+    img {
+      @include absoluteCenter;
+      border-radius: 5px;
+    }
+  }
+
+  .img-box {
+    width: 300px;
+    height: 162px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+
+  .content {
+    h6 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    .star {
+      padding-left: 8px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.4em;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .carousel-inner {
+      display: flex;
+    }
+    .carousel-item {
+      margin-right: 0px;
+      flex: 0 0 50%;
+      display: block;
+    }
+  }
+}

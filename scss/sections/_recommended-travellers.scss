@@ -1,0 +1,67 @@
+@use "../custom" as *;
+
+.recommended-travellers {
+  .recommended-logo {
+    width: 205px;
+    height: 205px;
+    border-radius: 5px;
+
+    @include media-breakpoint-down(sm) {
+      width: 350px;
+      height: 350px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  .prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    border: 2.5px solid $secondary;
+    color: $secondary;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    border: 2.5px solid $secondary;
+    color: $secondary;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .carousel-inner {
+      display: flex;
+    }
+    .carousel-item {
+      margin-right: 5px;
+      flex: 0 0 33.33%;
+      display: block;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .carousel-item {
+      flex: 0 0 16.66%;
+    }
+  }
+}

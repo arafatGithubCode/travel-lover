@@ -11933,6 +11933,26 @@ textarea.form-control-lg {
   word-spacing: nowrap;
 }
 
+.top-heading {
+  margin-top: -2.4rem;
+}
+.top-heading .bg-text {
+  position: absolute;
+  font-size: 5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  -webkit-text-stroke: 1.5px #adb5bd;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+  z-index: 0;
+  top: -10px;
+}
+@media (max-width: 767.98px) {
+  .top-heading .bg-text {
+    font-size: 3rem;
+  }
+}
+
 .top-bar {
   position: relative;
   background-color: #0b6bc4;
@@ -12212,15 +12232,14 @@ textarea.form-control-lg {
 .tour-customization .tour-card {
   position: relative;
   background: no-repeat center center/cover;
+  margin-right: 5px;
 }
 .tour-customization .tour-card .content {
-  width: 100%;
-  height: 100%;
   transition: all 0.3s ease-in-out;
 }
-.tour-customization .tour-card .content:hover {
+.tour-customization .tour-card:hover {
   background-color: #000;
-  opacity: 0.75;
+  background-position: 0.5;
 }
 .tour-customization .prev {
   position: absolute;
@@ -12252,6 +12271,19 @@ textarea.form-control-lg {
 .tour-customization .next:hover {
   background-color: #ff7902;
 }
+.tour-customization .bg-opacity-10:hover {
+  --bs-bg-opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .tour-customization .carousel-inner {
+    display: flex;
+  }
+  .tour-customization .carousel-item {
+    margin-right: 0px;
+    flex: 0 0 33.33%;
+    display: block;
+  }
+}
 
 .tour-boxes {
   position: relative;
@@ -12281,25 +12313,6 @@ textarea.form-control-lg {
 
 .tour-items {
   position: relative;
-}
-.tour-items .bg-text {
-  position: absolute;
-  font-size: 5em;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  -webkit-text-stroke: 1.5px #adb5bd;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.3;
-  z-index: 0;
-  top: -10px;
-}
-@media (max-width: 767.98px) {
-  .tour-items .bg-text {
-    font-size: 3.5rem;
-  }
-}
-.tour-items .top {
-  margin-top: -2.4rem;
 }
 .tour-items .tour-item-wrapper {
   display: flex;
@@ -12371,6 +12384,182 @@ textarea.form-control-lg {
 }
 .tour-items .tour-item-wrapper .tour-item .skewed_button:hover::before {
   background-color: #ff7902;
+}
+
+.review {
+  position: relative;
+  background: url("https://images.pexels.com/photos/17845104/pexels-photo-17845104/free-photo-of-kanchanjunga-mountain-sunrise.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+.review__txt {
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #fff;
+  -webkit-text-fill-color: transparent;
+}
+.review .carousel-item {
+  border-right: 5px solid transparent;
+}
+.review .carousel-item .carousel-img {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: no-repeat center center/cover;
+}
+.review .carousel-item .carousel-img .fa-circle-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  cursor: pointer;
+}
+.review .carousel-item .carousel-img .fa-circle-play:hover {
+  color: #fff;
+}
+.review .carousel-item .carousel-img .star {
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+}
+.review .carousel-item .carousel-img p {
+  position: absolute;
+  left: 20px;
+  bottom: 2px;
+}
+.review .prev svg,
+.review .next svg {
+  border: 2.5px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.review .prev {
+  position: absolute;
+  bottom: 0px;
+  left: 46%;
+  transform: translateX(-46%);
+}
+.review .next {
+  position: absolute;
+  bottom: 0px;
+  right: 46%;
+  transform: translateX(46%);
+}
+.review .logo {
+  width: 133px;
+  height: 50px;
+  background-color: #fff;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+.review .logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.review .img-box {
+  width: 300px;
+  height: 162px;
+}
+.review .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.review .content h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+.review .content .star {
+  padding-left: 8px;
+}
+.review .content .star i {
+  font-size: 12px;
+}
+.review .content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.4em;
+}
+@media (min-width: 768px) {
+  .review .carousel-inner {
+    display: flex;
+  }
+  .review .carousel-item {
+    margin-right: 0px;
+    flex: 0 0 50%;
+    display: block;
+  }
+}
+
+.recommended-travellers .recommended-logo {
+  width: 205px;
+  height: 205px;
+  border-radius: 5px;
+}
+@media (max-width: 575.98px) {
+  .recommended-travellers .recommended-logo {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+  }
+}
+.recommended-travellers .recommended-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.recommended-travellers .prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  border: 2.5px solid #ff7902;
+  color: #ff7902;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.recommended-travellers .next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  border: 2.5px solid #ff7902;
+  color: #ff7902;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media (min-width: 576px) {
+  .recommended-travellers .carousel-inner {
+    display: flex;
+  }
+  .recommended-travellers .carousel-item {
+    margin-right: 5px;
+    flex: 0 0 33.33%;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .recommended-travellers .carousel-item {
+    flex: 0 0 16.66%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

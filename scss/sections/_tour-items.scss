@@ -3,26 +3,6 @@
 .tour-items {
   position: relative;
 
-  .bg-text {
-    position: absolute;
-    font-size: 5em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    -webkit-text-stroke: 1.5px $gray-500;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.3;
-    z-index: 0;
-    top: -10px;
-
-    @include media-breakpoint-down(md) {
-      font-size: 3.5rem;
-    }
-  }
-
-  .top {
-    margin-top: -2.4rem;
-  }
-
   .tour-item-wrapper {
     display: flex;
     justify-content: center;
