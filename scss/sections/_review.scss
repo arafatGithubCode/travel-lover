@@ -13,6 +13,10 @@
     color: $white;
     -webkit-text-stroke: 1.5px $white;
     -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3rem;
+    }
   }
 
   .carousel-item {

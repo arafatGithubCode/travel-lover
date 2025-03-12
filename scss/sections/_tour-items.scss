@@ -6,7 +6,8 @@
   .tour-item-wrapper {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    column-gap: 5px;
+    row-gap: 15px;
     flex-wrap: wrap;
 
     .tour-item {
@@ -14,6 +15,10 @@
 
       @include media-breakpoint-down(sm) {
         width: 390px;
+      }
+
+      .amount-line {
+        padding-left: 10px;
       }
 
       &__img-wrapper {

@@ -12118,10 +12118,21 @@ textarea.form-control-lg {
 .hero .content h1 span {
   color: #ff7902;
 }
+@media (max-width: 575.98px) {
+  .hero .content h1 {
+    font-size: 3rem;
+  }
+}
 .hero .content p {
   font-size: 1.2rem;
   margin-top: 1rem;
   line-height: 1.4em;
+  text-align: center;
+}
+@media (max-width: 575.98px) {
+  .hero .content p {
+    font-size: 1rem;
+  }
 }
 .hero .content > div {
   display: flex;
@@ -12134,7 +12145,7 @@ textarea.form-control-lg {
   margin-top: 2rem;
   display: inline-block;
   color: #000;
-  width: 380px;
+  width: 350px;
 }
 .hero .content > div input {
   border: none;
@@ -12313,6 +12324,7 @@ textarea.form-control-lg {
 }
 .tour-boxes .tour-box p {
   font-size: 1rem;
+  white-space: nowrap;
 }
 @media (max-width: 767.98px) {
   .tour-boxes .tour-box p {
@@ -12344,7 +12356,8 @@ textarea.form-control-lg {
 .tour-items .tour-item-wrapper {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  column-gap: 5px;
+  row-gap: 15px;
   flex-wrap: wrap;
 }
 .tour-items .tour-item-wrapper .tour-item {
@@ -12354,6 +12367,9 @@ textarea.form-control-lg {
   .tour-items .tour-item-wrapper .tour-item {
     width: 390px;
   }
+}
+.tour-items .tour-item-wrapper .tour-item .amount-line {
+  padding-left: 10px;
 }
 .tour-items .tour-item-wrapper .tour-item__img-wrapper {
   position: relative;
@@ -12429,6 +12445,11 @@ textarea.form-control-lg {
   color: #fff;
   -webkit-text-stroke: 1.5px #fff;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 575.98px) {
+  .review__txt {
+    font-size: 3rem;
+  }
 }
 .review .carousel-item {
   border-right: 5px solid transparent;
